@@ -1,0 +1,17 @@
+{
+  "name": "jacataloguei! Admin",
+  "short_name": "jacataloguei! Admin",
+  "theme_color": "#261C43",
+  "background_color": "#261C43",
+  "display": "fullscreen",
+  "Scope": "https://jacataloguei.com.br/login/index.php",
+  "start_url": "https://jacataloguei.com.br/login/index.php",
+  "icons": [
+    {
+      "src": "https://jacataloguei.com.br/login/img/258x258.png",
+      "sizes": "1080x1080",
+      "type": "image/png"
+    } 
+  ],
+  "splash_pages": null
+}
