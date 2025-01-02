@@ -403,9 +403,7 @@ include('../../_layout/modal.php');
           </div>
 
           <div class="row">
-
             <div class="col-md-12">
-
               <div class="panel-group panel-filters panel-variacoes">
                 <div class="panel panel-default">
                   <div class="panel-heading">
@@ -494,20 +492,6 @@ include('../../_layout/modal.php');
                           <div class="row">
                             <div class="col-md-12">
                               <div class="render-cores">
-                                <!-- Exemplo de cores -->
-                                <div class="color-option" style="display: inline-block; margin: 5px;">
-                                  <label>
-                                    <input type="radio" name="product-color" value="red" style="display: none;">
-                                    <span class="color-preview" style="display: inline-block; width: 30px; height: 30px; background-color: red; border: 1px solid #ccc; cursor: pointer;"></span>
-                                  </label>
-                                </div>
-                                <div class="color-option" style="display: inline-block; margin: 5px;">
-                                  <label>
-                                    <input type="radio" name="product-color" value="blue" style="display: none;">
-                                    <span class="color-preview" style="display: inline-block; width: 30px; height: 30px; background-color: blue; border: 1px solid #ccc; cursor: pointer;"></span>
-                                  </label>
-                                </div>
-                                <!-- Adicione mais opções aqui -->
                               </div>
                             </div>
                           </div>
@@ -790,6 +774,19 @@ $(document).ready(function() {
         $.get("<?php echo get_just_url(); ?>/_core/_ajax/variacoes.php?modo=variacao", function(data){
             render = data;
             $(".render-variacoes").append(render);
+            $(" .panel-subvariacao ").fadeIn(400);
+            reordena();
+            masks();
+        });
+
+    });
+
+    $(document).on('click', '.adicionar-cor', function() {
+
+        var render;
+        $.get("<?php echo get_just_url(); ?>/_core/_ajax/variacoes.php?modo=cor", function(data){
+            render = data;
+            $(".render-cores").append(render);
             $(" .panel-subvariacao ").fadeIn(400);
             reordena();
             masks();
