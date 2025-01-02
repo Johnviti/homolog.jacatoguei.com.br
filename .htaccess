@@ -1,0 +1,12 @@
+RewriteEngine On
+RewriteBase /
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{HTTP_HOST} ^([a-z0-9-]+).jacataloguei.com.br [NC]
+RewriteRule (.*) index.php?insubdominio=%1&inrouter=$1 [NC,L,QSA]
+ErrorDocument 404 /404.php
+
+# php -- BEGIN cPanel-generated handler, do not edit
+# Set the “ea-php74” package as the default “PHP” programming language.
+
+# php -- END cPanel-generated handler, do not edit
