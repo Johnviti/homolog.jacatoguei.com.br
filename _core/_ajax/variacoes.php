@@ -111,8 +111,6 @@ $modo = $_GET['modo'];
                     </div>
                   </div>
                 </div>
-                <!-- <div class="itens-cores">
-                </div> -->
               </div>
             </div>
           </div>

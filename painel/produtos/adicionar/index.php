@@ -479,13 +479,12 @@ include('../../_layout/modal.php');
                     <h4 class="panel-title">
                       <a data-toggle="collapse" href="#collapse-cores">
                         <span class="desc">Cores</span>
-                        <i class="lni lni-palette"></i>
                         <div class="clear"></div>
                       </a>
                     </h4>
                   </div>
-                  <div id="collapse-cores" class="panel-collapse collapse">
-                    <div class="panel-body">
+                  <div id="collapse-cores" class="panel-collapse collapse <?php if( $_SESSION['estabelecimento']['funcionalidade_variacao'] == "1" ) { echo "in"; } ?>">
+                  <div class="panel-body">
                       <?php if( $_SESSION['estabelecimento']['funcionalidade_variacao'] == "1" ) { ?>
                         <!-- Cores -->
                         <div class="variacoes">
