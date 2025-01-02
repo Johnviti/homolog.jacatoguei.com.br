@@ -471,6 +471,81 @@ include('../../_layout/modal.php');
 
           </div>
 
+
+          <div class="row">
+            <div class="col-md-12">
+              <div class="panel-group panel-filters panel-variacoes">
+                <!-- Painel de Cores -->
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h4 class="panel-title">
+                      <a data-toggle="collapse" href="#collapse-cores">
+                        <span class="desc">Cores</span>
+                        <i class="lni lni-palette"></i>
+                        <div class="clear"></div>
+                      </a>
+                    </h4>
+                  </div>
+                  <div id="collapse-cores" class="panel-collapse collapse">
+                    <div class="panel-body">
+                      <?php if( $_SESSION['estabelecimento']['funcionalidade_variacao'] == "1" ) { ?>
+                        <!-- Cores -->
+                        <div class="variacoes">
+                          <div class="row">
+                            <div class="col-md-12">
+                              <div class="render-cores">
+                                <!-- Exemplo de cores -->
+                                <div class="color-option" style="display: inline-block; margin: 5px;">
+                                  <label>
+                                    <input type="radio" name="product-color" value="red" style="display: none;">
+                                    <span class="color-preview" style="display: inline-block; width: 30px; height: 30px; background-color: red; border: 1px solid #ccc; cursor: pointer;"></span>
+                                  </label>
+                                </div>
+                                <div class="color-option" style="display: inline-block; margin: 5px;">
+                                  <label>
+                                    <input type="radio" name="product-color" value="blue" style="display: none;">
+                                    <span class="color-preview" style="display: inline-block; width: 30px; height: 30px; background-color: blue; border: 1px solid #ccc; cursor: pointer;"></span>
+                                  </label>
+                                </div>
+                                <!-- Adicione mais opções aqui -->
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-12">
+                              <div class="adicionar adicionar-cor">
+                                <i class="lni lni-plus"></i>
+                                <span>Adicionar cor</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- / Cores -->
+                      <?php } else { ?>
+                        <div class="expiration-info variacao-hire">
+                          <div class="row">
+                            <div class="col-md-9">
+                              <span class="msg">O seu plano não possuí suporte para cores de produto, visite a nossa seção de planos e adquira um com a funcionalidade.</span>
+                            </div>
+                            <div class="col-md-3">
+                              <div class="add-new add-center text-center">
+                                <a href="<?php panel_url(); ?>/plano/listar">
+                                  <span>Ver planos</span>
+                                  <i class="lni lni-plus"></i>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      <?php } ?>
+                    </div>
+                  </div>
+                </div>
+              </div> 
+            </div>
+          </div>
+
+
           <div class="row">
 
             <div class="col-md-12">
